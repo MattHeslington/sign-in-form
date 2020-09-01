@@ -5,7 +5,10 @@ import {
     Link,
     FormControl,
     FormLabel,
+    Icon,
     Input,
+    InputGroup,
+    InputLeftElement,
     ThemeProvider,
     theme,
     ColorModeProvider,
@@ -80,11 +83,17 @@ const LoginForm = () => {
              <form>
                  <FormControl>
                      <FormLabel>Email Address</FormLabel>
-                     <Input type='email' placeholder='Enter your email address'/>
+                     <InputGroup>
+                        <InputLeftElement children={<Icon name="email" color="gray.300" />} />
+                        <Input type='email' placeholder='Enter your email address'/>
+                    </InputGroup>
                  </FormControl>
                  <FormControl mt={4}>
                      <FormLabel>Password</FormLabel>
-                     <Input type='passowrd' placeholder='Enter your password'/>
+                     <InputGroup>
+                        <InputLeftElement children={<Icon name="lock" color="gray.300" />} />
+                        <Input type='password' placeholder='Enter your password'/>
+                    </InputGroup>
                  </FormControl>
                  <Stack isInline justifyContent="space-between" mt={4}>
                      <Box>
